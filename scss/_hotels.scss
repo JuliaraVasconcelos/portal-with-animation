@@ -1,0 +1,47 @@
+.hotels{
+    width: 90%;
+    margin: 12rem auto 5rem;
+    display: grid;
+    row-gap: 5rem;
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        background-color: $light-color;
+        border-radius: $bd-radius;
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+
+        img{
+            width: 90%;
+            transition: .5s;
+            @include img-scale;
+        }
+
+        div{
+            align-self: center;
+            width: 90%;
+
+            h3{
+                font-size: 2rem;
+            }
+            p{
+                padding: .5rem 0;
+                margin: 1.5rem 0;
+            }
+            a{
+                color: $dark-color;
+                background-color: $primary-color;
+                border-radius: $bd-radius;
+                font-weight: 800;
+                padding: .5rem 1rem;
+                transition: .5s;
+                @include btn_hover;
+            }
+        }
+    }
+}
+
+.hotels-moving{
+    animation: hotels 1.5s ease-in-out forwards;
+}

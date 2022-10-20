@@ -1,0 +1,15 @@
+@mixin btn_hover {
+    &:hover{
+        box-shadow: 2px 3px 10px rgba(9, 8, 8, 0.3);
+        background-color: $dark-color;
+        color: $light-color;
+    }
+}
+
+@mixin img_scale {
+    &:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    
+}

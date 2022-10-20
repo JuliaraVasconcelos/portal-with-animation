@@ -1,0 +1,55 @@
+.hero{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 20px auto;
+
+    .hero-content{
+        align-self: center;
+        width: 100%;
+        color: $dark-color;
+        animation: moving 1.5s ease-in-out;
+
+        h2{
+            font-size: 3rem;
+            line-height: 90%;
+        }
+        p{
+            font-size: 0.9rem;
+            margin: 1rem 0 2rem;
+            line-height: 160%;
+        }
+        a{
+            color: $dark-color;
+            background-color: $primary-color;
+            border-radius: $bd-radius;
+            font-weight: 800;
+            padding: .8rem 2rem;
+            transition: .5s;
+            @include btn_hover;
+
+            .arrow{
+                margin-left: 7px;
+                font-size: 1.1rem;
+                align-self: center;
+                animation: arrow .6s infinite;
+            }
+        }
+    }
+    
+    .hero-img{
+        padding: 0 .5rem;
+        width: 90%;
+        height: 100%;
+        border-radius: $bd-radius;
+        // box-shadow: 2px 2px 30px rgba(0, 0, 0, .30);
+        animation: hero-image 1.5s ease-in-out forwards;
+        transition: .5s;
+        @include img_scale;
+        
+        img{
+            height: 100%;
+            border-radius: $bd-radius;
+        }
+    }
+}
